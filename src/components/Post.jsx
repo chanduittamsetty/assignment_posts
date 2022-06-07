@@ -7,7 +7,7 @@ export const Posts=()=>{
     const [posts,setPosts]=useState([]);
     useEffect(()=>{
         axios.get("https://jsonplaceholder.typicode.com/posts").then(({data})=>{return setPosts(data)})
-    },[])
+    },[input])
     const handleChange=(e)=>{
         console.log(e.target.value)
         setInput(e.target.value)
